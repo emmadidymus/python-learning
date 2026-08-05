@@ -13,3 +13,5 @@ def greeting():
     return "Hello, Sally!"
 
 print(greeting())
+
+# You can call the decorator as many times as you want
