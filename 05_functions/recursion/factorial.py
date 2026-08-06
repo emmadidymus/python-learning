@@ -4,4 +4,4 @@ def factorial(n):
     else:
         return n * factorial(n-1)
 
-print(factorial(5))
+print(factorial(int(input("Enter the number whose factorial you would like to calculate: "))))
