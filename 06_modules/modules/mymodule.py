@@ -1,0 +1,5 @@
+# Creating a module
+
+def greeting(name):
+    return f"Hello, {name}"
+
