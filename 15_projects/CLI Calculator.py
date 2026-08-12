@@ -43,8 +43,13 @@ while True:
         print("Please enter a valid number!")
 
 
-y = input("Enter Operator(+, -, *, /, %, **): ")
+while True:
+    y = input("Enter Operator(+, -, *, /, %, **): ")
 
+    if y in ["+", "-", "*", "/", "%", "**"]:
+        break
+
+    print("Please enter a valid operator!")
 
 print("Result: ", result(x,y,z))
 
