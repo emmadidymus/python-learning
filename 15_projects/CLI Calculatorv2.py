@@ -1,19 +1,19 @@
 import math
 
 
-def results(x, y, z):
+def calculate(x, operator, z):
     try:
-        if y == '+':
+        if operator == '+':
             return x + z
-        elif y == '-':
+        elif operator == '-':
             return x - z
-        elif y == '*':
+        elif operator == '*':
             return x * z
-        elif y == '/':
+        elif operator == '/':
             return x / z
-        elif y == '%':
+        elif operator == '%':
             return x % z
-        elif y == '**':
+        elif operator == '**':
             return x ** z
     except ZeroDivisionError:
         return "Error! Cannot divide by zero!"
@@ -25,9 +25,9 @@ while True:
 
     while True:
 
-        y = input("Enter Operator(+, -, *, /, %, **,sqrt): ")
+        operator = input("Enter Operator(+, -, *, /, %, **,sqrt): ")
 
-        if y in ["+", "-", "*", "/", "%", "**"]:
+        if operator in ["+", "-", "*", "/", "%", "**"]:
             while True:
                 try:
                     x = float(input("Enter the first number: "))
@@ -43,11 +43,11 @@ while True:
                     print("Please enter a valid number!")
 
 
-            print("Result:", results(x, y, z))
+            print("Result:", calculate(x, operator, z))
             break
 
 
-        elif y in ["sqrt"]:
+        elif operator in ["sqrt"]:
             while True:
                 try:
                     a = float(input("Enter a number: "))
@@ -55,7 +55,7 @@ while True:
                     break
                 except ValueError:
                     print("Please enter a nonnegative number!")
-
+            break
 
         else:
             print("Please enter a valid operator!")
