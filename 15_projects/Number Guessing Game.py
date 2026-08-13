@@ -1,36 +1,28 @@
 import random
 
-x = random.randint(1,100)
 
 while True:
-    try:
-        y = int(input("A random number has been generated. Try and guess it: "))
+    x = random.randint(1, 50)
+
+    while True:
+
+        try:
+            y = int(input("Guess the number: "))
+        except ValueError:
+            print("Please enter a valid Integer!")
+            continue
+
+        if y < x:
+            print("Too low!")
+        elif y > x:
+            print("Too high!")
+        else:
+            print("Congratulations! You guessed the right number!")
+            break
+
+    repeat = input("Play again? (Yes/No): ")
+
+    if repeat.lower() == 'yes':
+        continue
+    else:
         break
-    except ValueError:
-        print("Please enter a valid integer!")
-
-while True:
-    if y < x:
-        print("Too low!")
-        while True:
-            try:
-                y = int(input("Guess again: "))
-                break
-            except ValueError:
-                print("Please enter a valid integer!")
-
-
-    elif y > x:
-        print("Too high!")
-        while True:
-            try:
-                y = int(input("Guess again: "))
-                break
-            except ValueError:
-                print("Please enter a valid integer!")
-
-    elif y == x:
-        print(f"Congratulations! You guessed it right attempts")
-        break
-
-
