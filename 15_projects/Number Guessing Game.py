@@ -4,10 +4,12 @@ import random
 while True:
     x = random.randint(1, 50)
 
+    attempts = 0
     while True:
 
         try:
             y = int(input("Guess the number: "))
+            attempts += 1
         except ValueError:
             print("Please enter a valid Integer!")
             continue
@@ -17,9 +19,8 @@ while True:
         elif y > x:
             print("Too high!")
         else:
-            print("Congratulations! You guessed the right number!")
+            print(f"Congratulations! You guessed the right number in {attempts} attempts!")
             break
-
     repeat = input("Play again? (Yes/No): ")
 
     if repeat.lower() == 'yes':
