@@ -1,3 +1,5 @@
+import math
+
 while True:
 
     print("=================")
@@ -24,6 +26,8 @@ while True:
 
             elif y == "**":
                 return x ** z
+            elif y == "sqrt":
+                return math.sqrt(x)
             return None
         except ZeroDivisionError:
             return "Error! Cannot divide by zero!"
@@ -59,6 +63,9 @@ while True:
         continue
     else:
         break
+
+
+
 
 
 
