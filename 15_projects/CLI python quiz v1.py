@@ -28,7 +28,13 @@ for question in questions:
     for option in question["options"]:
         print(option)
 
-    answer = input("Enter you answer: ").upper()
+    while True:
+        answer = input("Enter you answer: ").upper()
+
+        if answer in ['A', 'B', 'C', 'D']:
+            break
+        else:
+            print("Please enter A, B, C, or D")
 
     if answer == question["answer"]:
         print("Correct!")
