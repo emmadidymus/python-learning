@@ -20,30 +20,42 @@ questions = [
      "answer": "C"}
 
 ]
-score = 0
 
-for question in questions:
-    print(question["question"])
 
-    for option in question["options"]:
-        print(option)
+while True:
+    
+    score = 0
 
-    while True:
-        answer = input("Enter you answer: ").upper()
+    for question in questions:
+        print(question["question"])
 
-        if answer in ['A', 'B', 'C', 'D']:
-            break
+        for option in question["options"]:
+            print(option)
+
+        while True:
+            answer = input("Enter you answer: ").upper()
+
+            if answer in ['A', 'B', 'C', 'D']:
+                break
+            else:
+                print("Please enter A, B, C, or D")
+
+        if answer == question["answer"]:
+            print("Correct!")
+            score += 1
         else:
-            print("Please enter A, B, C, or D")
+            print("Incorrect!")
 
-    if answer == question["answer"]:
-        print("Correct!")
-        score += 1
+    print(f"You scored {score} out of {len(questions)}")
+
+    percentage_score = (score / len(questions)) * 100
+
+    print(f"Your percentage score is {percentage_score} percent")
+
+    repeat = input("Play again? ")
+
+    if repeat.lower() == "yes":
+        continue
     else:
-        print("Incorrect!")
+        break
 
-print(f"You scored {score} out of {len(questions)}")
-
-percentage_score = (score / len(questions)) * 100
-
-print(f"Your percentage score is {percentage_score} percent")
