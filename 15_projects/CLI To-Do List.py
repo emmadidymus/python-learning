@@ -21,22 +21,25 @@ while True:
     if choice == 1:
         enter_task = input("Enter Task: ")
         tasks.append(enter_task)
+        print("Task added!")
 
     elif choice == 2:
         if not tasks:
             print("No tasks yet")
-            
-        for task in tasks:
-            print(task)
+
+        for i in range(len(tasks)):
+            print(i+1, tasks[i])
 
 
     elif choice == 3:
         try:
-            remove_task = input("What task should be removed?: ")
-            tasks.remove(remove_task)
+            remove_task = int(input("What task number should be removed?: "))
+            tasks.pop(remove_task-1)
             print("Task removed!")
         except ValueError:
-            print("Task not found!")
+            print("Please enter a valid number!")
+        except IndexError:
+            print("Please enter a valid task number ")
 
     elif choice == 4:
         break
