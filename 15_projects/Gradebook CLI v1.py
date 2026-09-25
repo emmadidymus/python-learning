@@ -70,6 +70,13 @@ while True:
             class_average = total_marks / number_of_marks
             print(f"The class average is {class_average:.2f}")
 
+    elif choice == 5:
+        print("Thank you for using Gradebook!")
+        break
+
+    else:
+        continue
+
 
 
 
