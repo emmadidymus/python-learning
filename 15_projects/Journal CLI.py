@@ -13,3 +13,11 @@ def add_entry():
 
 add_entry()
 
+def view_entries():
+    try:
+        with open("journal.txt") as f:
+            print(f.read())
+    except FileNotFoundError:
+        print("There are no entries yet!")
+
+view_entries()
