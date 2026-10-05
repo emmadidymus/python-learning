@@ -32,6 +32,21 @@ def search_entries():
     except FileNotFoundError:
         print("There are no entries yet!")
 
+def delete_all_entries():
+    try:
+        question = input("Are you sure you want to delete all entries?(Yes/No): ")
+
+        if question.lower() == "yes":
+            with open("journal.txt", "w") as f:
+                pass
+        elif question.lower() == "no":
+            pass
+    except FileNotFoundError:
+        print("There are no entries yet!")
+
+
+
+
 
 
 
@@ -59,6 +74,8 @@ while True:
         view_entries()
     elif choice == 3:
         search_entries()
+    elif choice == 4:
+        delete_all_entries()
     elif choice == 5:
         print("Goodbye and thank you for using journal CLI")
         break
