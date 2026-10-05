@@ -4,3 +4,7 @@ Day 2
 I learned the NumPy module
 My first day
 I learned how to handle files in python
+Day One
+Learned how to handle files in python
+Day 2
+Attended a hackathon
