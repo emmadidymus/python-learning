@@ -1,4 +1,5 @@
 
+
 def add_entry():
     title = input("What is the title of your entry?: ")
     entry = input("What is the entry?: ")
@@ -15,6 +16,23 @@ def view_entries():
             print(f.read())
     except FileNotFoundError:
         print("There are no entries yet!")
+
+
+def search_entries():
+    search = input("What word or phrase do you want to search for?: ")
+    found = False
+    try:
+        with open("journal.txt") as f:
+            for line in f:
+                if search.lower() in line.lower():
+                    print(line)
+                    found = True
+            if not found:
+                print("No matching entries found!")
+    except FileNotFoundError:
+        print("There are no entries yet!")
+
+
 
 
 while True:
@@ -39,6 +57,8 @@ while True:
         add_entry()
     elif choice == 2:
         view_entries()
+    elif choice == 3:
+        search_entries()
     elif choice == 5:
         print("Goodbye and thank you for using journal CLI")
         break
