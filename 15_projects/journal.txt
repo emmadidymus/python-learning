@@ -1,2 +1,4 @@
-Day 1
-Travel
+--- Day One ---
+Travelling to Namibia
+--- Day Two ---
+Flyihng to the Table Mountains

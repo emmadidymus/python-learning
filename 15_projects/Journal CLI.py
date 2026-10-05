@@ -5,7 +5,7 @@ def add_entry():
     entry = input("What is the entry?: ")
 
     with open("journal.txt", "a") as f:
-        f.write(title + "\n")
+        f.write("--- " + title + " ---" + "\n")
         f.write(entry + "\n")
 
 
