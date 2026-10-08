@@ -37,3 +37,12 @@ print(f"The number of sentences in your paragraph is {sentence_count}")
 #unique words count
 word_set = set(word_count)
 print(len(word_set))
+
+#most common word
+common_word = {}
+for word in word_count:
+    if word in common_word:
+        common_word[word] += 1
+    else:
+        common_word[word]  = 1
+print(common_word)
