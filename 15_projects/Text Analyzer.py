@@ -70,8 +70,10 @@ print(f"Occurrences: {highest_count} ")
 longest_word = ""
 length = 0
 
-for longest in word_count:
-
+for word in word_count:
+    if len(word) > length:
+        longest_word = word
+        length = len(word)
 
 
 
