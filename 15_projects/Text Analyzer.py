@@ -6,6 +6,7 @@ print("=============")
 paragraph = input("Enter a paragraph of text: ")
 
 # Word Count
+
 word_count = (
      paragraph.lower()
     .replace(".", "")
@@ -19,6 +20,7 @@ word_count = (
 print(f"The number of words in your paragraph is {len(word_count)}")
 
 # Character Count(Excluding Spaces)
+
 count = 0
 for character in paragraph:
     if character != " ":
@@ -27,6 +29,7 @@ for character in paragraph:
 print(f"The number of characters in your paragraph is {count}")
 
 #Sentence count
+
 sentence_count = 0
 
 for sentence in paragraph:
@@ -35,14 +38,40 @@ for sentence in paragraph:
 print(f"The number of sentences in your paragraph is {sentence_count}")
 
 #unique words count
+
 word_set = set(word_count)
-print(len(word_set))
+print(f"The number of unique words in your paragraph is {len(word_set)}")
 
 #most common word
+
 common_word = {}
 for word in word_count:
     if word in common_word:
         common_word[word] += 1
     else:
         common_word[word]  = 1
-print(common_word)
+
+most_common = ""
+highest_count = 0
+
+for word in common_word:
+    count = common_word[word]
+    if count > highest_count:
+        most_common = word
+        highest_count=common_word[word]
+        continue
+
+print(f"Most common word: {most_common}")
+print(f"Occurrences: {highest_count} ")
+
+
+#longest word
+
+longest_word = ""
+length = 0
+
+for longest in word_count:
+
+
+
+
