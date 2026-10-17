@@ -55,8 +55,8 @@ most_common = ""
 highest_count = 0
 
 for word in common_word:
-    count = common_word[word]
-    if count > highest_count:
+    most_common_word_count = common_word[word]
+    if most_common_word_count  > highest_count:
         most_common = word
         highest_count=common_word[word]
         continue
@@ -74,6 +74,18 @@ for word in word_count:
     if len(word) > length:
         longest_word = word
         length = len(word)
+
+# average word length
+total_word_length = 0
+
+for word in word_count:
+    total_word_length += len(word)
+
+if not word_count:
+    print("No words found to calculate the average!")
+else:
+    average_word_length = total_word_length / len(word_count)
+    print(f"The average word length is {average_word_length:.2f}")
 
 
 
