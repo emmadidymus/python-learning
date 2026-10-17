@@ -59,7 +59,6 @@ for word in common_word:
     if most_common_word_count  > highest_count:
         most_common = word
         highest_count=common_word[word]
-        continue
 
 print(f"Most common word: {most_common}")
 print(f"Occurrences: {highest_count} ")
@@ -74,6 +73,9 @@ for word in word_count:
     if len(word) > length:
         longest_word = word
         length = len(word)
+
+print(f"Longest word: {longest_word}")
+print(f"Length: {length}")
 
 # average word length
 total_word_length = 0
