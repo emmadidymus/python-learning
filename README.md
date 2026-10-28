@@ -185,20 +185,20 @@ python3 05_functions/basic_functions/hello.py
 ## 📈 Progress
 
 - ✅ Python Fundamentals
-- 🔄 Python Basics
-- ⬜ Collections
-- ⬜ Control Flow
-- ⬜ Functions
+- ✅ Python Basics
+- ✅ Collections
+- ✅ Control Flow
+- ✅ Functions
 - ⬜ Modules
-- ⬜ File Handling
-- ⬜ Exception Handling
-- ⬜ Object-Oriented Programming
+- ✅ File Handling
+- ✅ Exception Handling
+- 🔄 Object-Oriented Programming
 - ⬜ Standard Library
 - ⬜ Data Science
 - ⬜ Machine Learning
 - ⬜ Data Structures & Algorithms
 - ⬜ Databases
-- ⬜ Projects
+- 🔄 Projects
 
 ---
 
