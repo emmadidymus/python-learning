@@ -14,6 +14,7 @@ class BankAccount:
         else:
             print("Invalid deposit amount!")
 
+
 account1 = BankAccount("Tobias", 10000001, 20000)
 account2 = BankAccount("John", 10000002, 34000)
 
