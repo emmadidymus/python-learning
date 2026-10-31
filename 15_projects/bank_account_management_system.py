@@ -14,6 +14,15 @@ class BankAccount:
         else:
             print("Invalid deposit amount!")
 
+    def withdraw(self, amount):
+        if amount <= 0:
+            print("Invalid withdraw amount!")
+        elif amount > self.balance:
+            print("Insufficient balance")
+        else:
+            self.balance -= amount
+            print(f"{amount} withdrawn from your account")
+
 
 account1 = BankAccount("Tobias", 10000001, 20000)
 account2 = BankAccount("John", 10000002, 34000)
